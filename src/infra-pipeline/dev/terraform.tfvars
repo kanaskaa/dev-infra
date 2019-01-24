@@ -1,0 +1,13 @@
+product_code = "eqet"
+env = "dev"
+aws_region = "us-east-1"
+vpc_cidr = "172.20.0.0/16"
+public_subnet_cidr = "172.20.10.0/24"
+private_subnet_cidr = "172.20.20.0/24"
+route_table_cidr = "0.0.0.0/0"
+public_az = "us-east-1a"
+private_az = "us-east-1b"
+count = 1
+instance_type = "t2.micro"
+ami_id = "ami-0ac019f4fcb7cb7e6"
+ami_key_pair_name = "dev-infra-ee"
