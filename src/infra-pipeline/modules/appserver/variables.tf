@@ -25,3 +25,6 @@ variable "aws_private_subnet" {
 variable "aws_vpc_id" {
   description = "vpc for security group"
 }
+variable "dummy" {
+  description = "dummy variable for dependecy on nat gateway"
+}

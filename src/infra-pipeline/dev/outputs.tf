@@ -4,7 +4,8 @@ output "dev_aws_infra" {
     map(
     "vpc_id", "${module.aws_dev_infra.aws_infra["vpc_id"]}",
     "public_subnet_id", "${module.aws_dev_infra.aws_infra["public_subnet_id"]}",
-    "private_subnet_id", "${module.aws_dev_infra.aws_infra["private_subnet_id"]}"
+    "private_subnet_id", "${module.aws_dev_infra.aws_infra["private_subnet_id"]}",
+    "nat_route_id", "${module.aws_dev_infra.aws_infra["nat_route_id"]}"
     )
   }"
 }

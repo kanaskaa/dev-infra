@@ -38,4 +38,5 @@ module "aws_dev_appserver" {
  ami_key_pair_name = "${var.ami_key_pair_name}"
  aws_private_subnet = "${module.aws_dev_infra.aws_infra["private_subnet_id"]}"
  aws_vpc_id = "${module.aws_dev_infra.aws_infra["vpc_id"]}"
+ dummy = "${module.aws_dev_infra.aws_infra["nat_route_id"]}"
 }

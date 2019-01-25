@@ -2,6 +2,12 @@ data "template_file" "aws_appserver-userdata" {
   template = "${file("${path.module}/files/userdata_appserver.sh")}"
 }
 
+resource "null_resource" "dummy" {
+  provisioner "local-exec" {
+    command = "echo ${var.dummy}"
+  }
+}
+
 resource "aws_security_group" "aws_security_group_appserver" {
   name = "app-security-group"
   description = "Appserver Security Group"
@@ -44,4 +50,5 @@ resource "aws_instance" "aws_ec2_instance_appserver" {
     Name  = "${var.product_code}-${var.env}-appserver-${count.index}"
     env   = "${var.env}"
   }
+  depends_on   = ["null_resource.dummy"]
 }
