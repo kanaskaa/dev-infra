@@ -1,2 +1,2 @@
 [appserver]
-ip-address
+ip-address ansible_sudo_pass='*****'
