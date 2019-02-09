@@ -1,0 +1,14 @@
+    ---
+    - hosts: appserver
+      remote_user: centos
+      become: yes
+      become_method: sudo
+      tasks:      
+        - name: Running the container
+          docker_container:
+            image: kanaskaa/spring-petclinic:1.0.1
+            path: docker
+            state: running
+            
+        - name: Check if container is running
+          shell: docker ps
