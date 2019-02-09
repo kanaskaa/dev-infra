@@ -30,7 +30,9 @@ http://"public_ip_of_jenkins_instance":8080
 **How to deploy petclinic app on Appserver**
 1. Create a jenkins freestyle project. Configure the scm repo with link https://github.com/kanaskaa/dev-infra.git
 2. Under the command section, use execute shell option and add below command to it.
+
    ansible-playbook -i hosts main.yml --ask-become-pass
+   
 3. Run the jenkins jobs and check if it got executed succesfully.
 
 **Note**
