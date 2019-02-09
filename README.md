@@ -28,6 +28,9 @@ terraform apply --auto-approve
 http://"public_ip_of_jenkins_instance":8080
 
 **How to deploy petclinic app on Appserver**
+
+Ansible playbook and host file for deploying app using ansible is added to this repo
+
 1. Create a jenkins freestyle project. Configure the scm repo with link https://github.com/kanaskaa/dev-infra.git
 2. Under the command section, use execute shell option and add below command to it.
 
