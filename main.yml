@@ -4,11 +4,11 @@
       become: yes
       become_method: sudo
       tasks:      
-        - name: Running the container
+        - name: Running the petclinice app container
           docker_container:
             image: kanaskaa/spring-petclinic:1.0.1
             path: docker
             state: running
             
-        - name: Check if container is running
+        - name: Check if petclinic app container is running
           shell: docker ps
